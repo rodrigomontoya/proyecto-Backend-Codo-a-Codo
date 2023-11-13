@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Contact</title>
+  </head>
+  <body class="cuerpo">
+    <header class="encabezado">
+      <article class="logo">
+        <a href="../index.html">
+          <picture>
+            <img
+              src="../images\branding\logo_light_horizontal.svg"
+              alt="Logo de Empresa"
+            />
+          </picture>
+        </a>
+      </article>
+      <article class="barra_navegacion">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a class="item-submenu" href="/pages/shop.html"
+                >SHOP
+                <img
+                  src="../images\icons\Vector 1 (Stroke).svg"
+                  alt="Descripción de la imagen"
+              /></a>
+              <ul class="submenu">
+                <li>
+                  <a class="item-submenu" href="/pages/shop.html">FUNKOS</a>
+                </li>
+                <li>
+                  <a class="item-submenu" href="/pages/shop.html">REMERAS</a>
+                </li>
+                <li>
+                  <a class="item-submenu" href="/pages/shop.html">LLAVEROS</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="item-submenu" href="/pages/contact.html">CONTACTO</a>
+            </li>
+            <li><a class="item-submenu" href="/pages/login.html">LOGIN</a></li>
+            <li>
+              <a href="/pages/cart.html"
+                ><img src="../images\icons\cart-icon.svg" alt="Icono Cart"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </header>
+    <main class="cuerpo-contacto">
+      <!-- Contacto -->
+      <section class="contacto">
+        <article class="contacto-titulo">
+          <h1>CONTACTO</h1>
+        </article>
+        <!--Columna1-->
+        <article class="contacto-introduccion">
+          <p>
+            Nos encantaría que nos des tu opinión sobre nuestro emprendimiento .
+            Esto nos permitirá saber si estamos por un buen camino . Asi que no
+            lo dudes y comunicate con nosotros, estamos ansiosos por saber que
+            estás pensando acerca de nosotros . Hasta te damos la confianza para
+            darnos nuevas ideas . Recuerda de ideas no hay nada escrito.
+          </p>
+        </article>
+      </section>
+      <section class="contacto-form">
+        <div class="form">
+          <div class="div1"><label>Nombres:</label></div>
+          <div class="div2">
+            <input type="text" placeholder="Escriba sus Nombres" />
+          </div>
+          <div class="div3"><label>Apellidos:</label></div>
+          <div class="div4">
+            <input type="text" placeholder="Escriba sus Apellidos" />
+          </div>
+          <div class="div5"><label>Email:</label></div>
+          <div class="div6">
+            <input type="text" placeholder="Escriba su Email" />
+          </div>
+          <div class="div7"><label>Localidad:</label></div>
+          <div class="div8">
+            <input type="text" required placeholder="Escriba su Localidad" />
+          </div>
+          <div class="div9"><label>Provincia:</label></div>
+          <div class="div10">
+            <select required>
+              <option selected disabled value="">Elegir</option>
+              <option>Buenos Aires</option>
+              <option>Catamarca</option>
+              <option>Chaco</option>
+              <option>Chubut</option>
+              <option>Córdoba</option>
+              <option>Corrientes</option>
+              <option>Entre Rios</option>
+              <option>Formosa</option>
+              <option>Jujuy</option>
+              <option>La Pampa</option>
+              <option>La Rioja</option>
+              <option>Mendoza</option>
+              <option>Misiones</option>
+              <option>Neuquén</option>
+              <option>Río Negro</option>
+              <option>Salta</option>
+              <option>San Juan</option>
+              <option>San Luis</option>
+              <option>Santa Cruz</option>
+              <option>Santa Fe</option>
+              <option>Santiago del Estero</option>
+              <option>Tierra del Fuego</option>
+              <option>Tucumán</option>
+            </select>
+          </div>
+          <div class="div11"><label>Código Postal:</label></div>
+          <div class="div12">
+            <input
+              type="text"
+              required
+              placeholder="Escriba su Código Postal"
+            />
+          </div>
+          <div class="div13"><label>Comentario:</label></div>
+          <div class="div14">
+            <textarea placeholder="Escriba su Comentario"></textarea>
+          </div>
+        </div>
+      </section>
+      <section class="boton-terminos">
+        <div class="botones">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpiar</button>
+        </div>
+        <div class="terminos-container">
+          <input id="checkbox-terminos" type="checkbox" value="" required />
+          <label class="terminos" for="invalidCheck">
+            Acepto términos y condiciones.
+          </label>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="register.html">REGISTRARSE</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="contact.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <section class="copyright">
+        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+      </section>
+      <picture class="footer-logo">
+        <img
+          src="../images\branding\isotype.svg"
+          alt="Isotipo de la marca de FunkoShop"
+        />
+      </picture>
+    </footer>
+  </body>
+</html>

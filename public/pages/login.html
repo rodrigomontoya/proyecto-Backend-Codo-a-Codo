@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Login</title>
+  </head>
+  <body class="cuerpo">
+    <header class="encabezado">
+      <article class="logo">
+        <a href="../index.html">
+          <picture>
+            <img
+              src="../images\branding\logo_light_horizontal.svg"
+              alt="Logo de Empresa"
+            />
+          </picture>
+        </a>
+      </article>
+      <article class="barra_navegacion">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="shop.html">VER TIENDA</a>
+            </li>
+            <li>
+              <a class="item-submenu" href="../pages\admin\admin.html">ADMIN</a>
+            </li>
+            <li><a class="item-submenu" href="../index.html">SALIR</a></li>
+          </ul>
+        </nav>
+      </article>
+    </header>
+    <main>
+      <div class="login">
+        <div class="login-titulo">
+          <h1>INICIAR SESIÓN</h1>
+        </div>
+        <section class="container-form">
+          <form method="get" class="form-login">
+            <div class="div1">
+              <label for="usuario">Nombre de Usuario: </label>
+            </div>
+            <div class="div2">
+              <input
+                type="text"
+                placeholder="Escriba su Usuario"
+                name="usuario"
+                required
+              />
+            </div>
+            <div class="div3"><label for="contrasena">Contraseña:</label></div>
+            <div class="div4">
+              <input type="password" name="contrasena" required />
+            </div>
+            <div class="div5">
+              <label>
+                <input type="checkbox" name="recordar" /> Recordar mi contraseña
+              </label>
+            </div>
+            <div class="div6">
+              <a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="div7"><p>¿No tienes una cuenta?</p></div>
+            <div class="div8"><a href="register.html">Regístrate aquí</a></div>
+          </form>
+        </section>
+
+        <div class="boton-iniciar-sesion">
+          <button type="submit">Entrar</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="register.html">REGISTRARSE</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="contact.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <section class="copyright">
+        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+      </section>
+      <picture class="footer-logo">
+        <img
+          src="../images\branding\isotype.svg"
+          alt="Isotipo de la marca de FunkoShop"
+        />
+      </picture>
+    </footer>
+  </body>
+</html>

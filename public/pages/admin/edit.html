@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <article class="logo">
+        <a href="/index.html">
+          <picture>
+            <img
+              src="/images\branding\logo_light_horizontal.svg"
+              alt="Logo de Empresa"
+            />
+          </picture>
+        </a>
+      </article>
+      <article class="barra_navegacion">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="/pages\shop.html">VER TIENDA</a>
+            </li>
+            <li>
+              <a class="item-submenu" href="admin.html">ADMIN</a>
+            </li>
+            <li><a class="item-submenu" href="/index.html">SALIR</a></li>
+          </ul>
+        </nav>
+      </article>
+    </header>
+    <main>
+      <section class="edit-container">
+        <div>
+          <h1 class="titulo-edit">EDITAR ITEM</h1>
+        </div>
+        <article class="cat-licen-container">
+          <div>
+            <label>Categoría</label>
+            <select required>
+              <option selected disabled value="">Elegir</option>
+              <option>Figuras</option>
+              <option>Figuras</option>
+              <option>Figuras</option>
+              <!-- no se que opciones colocar-->
+            </select>
+          </div>
+          <div>
+            <label>Licencia</label>
+            <select required>
+              <option selected disabled value="">Elegir</option>
+              <option>Harry Potter</option>
+              <option>Star Wars</option>
+              <option>Pokemon</option>
+            </select>
+          </div>
+        </article>
+        <article class="nomb-container">
+          <div>
+            <label>Nombre del Producto:</label>
+            <input type="text" placeholder="Ingrese el nombre " />
+          </div>
+          <div class="descrip-container">
+            <textarea placeholder="Descripción del Producto"></textarea>
+          </div>
+        </article>
+        <article class="sku-prec-container">
+          <div>
+            <label>SKU:</label>
+            <input type="text" placeholder="SSK111AB001 " />
+          </div>
+          <div>
+            <label>Precio:</label>
+            <input class="inp-precio" type="number" placeholder="$ 0.000,00" />
+          </div>
+          <div>
+            <label>Stock:</label>
+            <input class="inp-stock" type="number" placeholder="0 " />
+          </div>
+        </article>
+        <article class="desc-cuo-container">
+          <div>
+            <label>Descuentos</label>
+            <input type="number" placeholder="0%" />
+          </div>
+          <div>
+            <label>Cuotas</label>
+            <select required>
+              <option selected disabled value="">Elegir</option>
+              <option>3 cuotas sin interés</option>
+              <option>6 cuotas sin interés</option>
+              <option>12 cuotas sin interés</option>
+            </select>
+          </div>
+        </article>
+        <div class="imag-container">
+          <label>Imágenes</label>
+          <input
+            type="file"
+            id="imagen"
+            name="imagen"
+            accept="image/*"
+            required
+          />
+        </div>
+        <article class="images-container">
+          <div class="container-1">
+            <img  class="img-1" src="/images\naruto\kakashi_hatake_front.svg" />
+            <p>Frente</p>
+          </div>
+          <div class="container-2">
+            <img  class="img-2 "src="/images\naruto\kakashi_hatake_back.svg" />
+            <p>Dorso</p>
+          </div>
+        </article>
+        <div class="boton-container">
+          <button type="submit">Modificar Producto</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="/pages/shop.html">SHOP</a></li>
+          <li><a href="/pages/register.html">REGISTRARSE</a></li>
+          <li><a href="/pages/login.html">LOGIN</a></li>
+          <li><a href="/pages/contact.html">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <section class="copyright">
+        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+      </section>
+      <picture class="footer-logo">
+        <img
+          src="/images\branding\isotype.svg"
+          alt="Isotipo de la marca de FunkoShop"
+        />
+      </picture>
+    </footer>
+  </body>
+</html>

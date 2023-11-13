@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <article class="logo">
+        <a href="/index.html">
+          <picture>
+            <img
+              src="/images\branding\logo_light_horizontal.svg"
+              alt="Logo de Empresa"
+            />
+          </picture>
+        </a>
+      </article>
+      <article class="barra_navegacion">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="/pages\shop.html">VER TIENDA</a>
+            </li>
+            <li>
+              <a class="item-submenu" href="admin.html">ADMIN</a>
+            </li>
+            <li><a class="item-submenu" href="/index.html">SALIR</a></li>
+          </ul>
+        </nav>
+      </article>
+    </header>
+    <main class="container-admin">    
+    <div class="searchBar">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 42 43" fill="none">
+          <path d="M33.075 35.8099L23.275 26.0099C22.4 26.7099 21.3937 27.2641 20.2562 27.6724C19.1187 28.0807 17.9083 28.2849 16.625 28.2849C13.4458 28.2849 10.7555 27.1836 8.554 24.9809C6.3525 22.7782 5.25117 20.0879 5.25 16.9099C5.25 13.7307 6.35133 11.0404 8.554 8.83891C10.7567 6.63741 13.447 5.53608 16.625 5.53491C19.8042 5.53491 22.4945 6.63625 24.696 8.83891C26.8975 11.0416 27.9988 13.7319 28 16.9099C28 18.1932 27.7958 19.4037 27.3875 20.5412C26.9792 21.6787 26.425 22.6849 25.725 23.5599L35.5688 33.4037C35.8896 33.7245 36.05 34.1182 36.05 34.5849C36.05 35.0516 35.875 35.4599 35.525 35.8099C35.2042 36.1307 34.7958 36.2912 34.3 36.2912C33.8042 36.2912 33.3958 36.1307 33.075 35.8099ZM16.625 24.7849C18.8125 24.7849 20.6722 24.019 22.204 22.4872C23.7358 20.9553 24.5012 19.0962 24.5 16.9099C24.5 14.7224 23.7341 12.8627 22.2023 11.3309C20.6704 9.79908 18.8113 9.03375 16.625 9.03491C14.4375 9.03491 12.5778 9.80083 11.046 11.3327C9.51417 12.8645 8.74883 14.7236 8.75 16.9099C8.75 19.0974 9.51592 20.9571 11.0478 22.4889C12.5796 24.0207 14.4387 24.7861 16.625 24.7849Z" fill="#1F1F1F"></path>
+          </svg>
+    </div>
+    <div class="buscador">
+      <input type="text" placeholder="código,nombre o categoría">
+    </div>
+    </div>
+    <div class="titulo-container">
+      <h2 class="tituloAdmin">LISTADO DE PRODUCTOS</h2>
+      <div class="addButton">
+        <p>AGREGAR</p> 
+        <a href="./create.html">
+        <button>+</button>
+      </a>
+      </div>
+    </div>
+
+    <table class="productTable">
+      <tr class="titulosTabla">
+        <th>ID</th>
+        <th>Código</th>
+        <th>Nombre del producto</th>
+        <th>Categoría</th>
+        <th></th>
+        <th></th>
+      </tr>
+        <tr>
+          <td class="numeroDeProducto">1</td>
+          <td>STW001001</td>
+          <td>Baby Yoda Blueball</td>
+          <td>STAR WARS</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></a>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">2</td>
+          <td>STW001002</td>
+          <td>Boba Fett Fighter</td>
+          <td>STAR WARS</td>
+          <td>
+            <a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">3</td>
+          <td>STW001003</td>
+          <td>Luke Skylwalker & Grogu</td>
+          <td>STAR WARS</td>
+          <td>
+            <a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">4</td>
+          <td>STW001004</td>
+          <td>Stormtrooper Lightsaber</td>
+          <td>STAR WARS</td>
+          <td>
+            <a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">5</td>
+          <td>PKM001001</td>
+          <td>Charmander Smiley</td>
+          <td>POKÉMON</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">6</td>
+          <td>PKM001002</td>
+          <td>Dragonite Hi!</td>
+          <td>POKÉMON</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">7</td>
+          <td>PKM001003</td>
+          <td>Pidgeotto Flying</td>
+          <td>POKÉMON</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">8</td>
+          <td>PKM001004</td>
+          <td>Pikachu Smiley</td>
+          <td>POKÉMON</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">9</td>
+          <td>PKM001005</td>
+          <td>Vulpix Fancy 
+</td>
+          <td>POKÉMON</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">10</td>
+          <td>HPT001001</td>
+          <td>Harry Potter & Hegwid</td>
+          <td>HARRY POTTER</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">11</td>
+          <td>HPT001002</td>
+          <td>Herminione Ball Dress/td>
+          <td>HARRY POTTER</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">12</td>
+          <td>HPT001003</td>
+          <td>Luna Lovegood Lion Mask</td>
+          <td>HARRY POTTER</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+        <tr>
+          <td class="numeroDeProducto">13</td>
+          <td>HPT001004</td>
+          <td>Snape Patronus</td>
+          <td>HARRY POTTER</td>
+          <td><a href="edit.html"><img src="/images/icons/edit_pencil.svg"></td>
+          <td><a href="edit.html"><img src="/images/icons/delete_trash.svg"></td>
+        </tr>
+      </table>
+      </body>
+  </main>
+  <footer >
+    <nav>
+      <ul>
+        <li><a href="/pages/shop.html" >SHOP</a></li>
+        <li><a href="/pages/register.html" >REGISTRARSE</a></li>
+        <li><a href="/pages/login.html" >LOGIN</a></li>
+        <li><a href="/pages/contact.html" >CONTACTO</a></li>
+      </ul>
+    </nav>
+    <section class="copyright">
+      <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    </section>
+    <picture class="footer-logo">
+      <img src="/images\branding\isotype.svg" alt="Isotipo de la marca de FunkoShop">
+     </picture>
+  </footer>
+</body>
+</html>
