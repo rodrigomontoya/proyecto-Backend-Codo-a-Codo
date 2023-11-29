@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="../css/style.css">
+    <title>Shop</title>
+  </head>
+  <body class="cuerpo-shop">
+    <%- include('partials/shop/header') %>
+  </article>
+  <main>
+  <section class="lista-productos" >
+    <div class="fila-1">
+    <article class="filtro-busq">
+      <div class="filtro-buscar">
+          <div>
+              <h1 >BUSCAR</h1>
+              <input type="text" placeholder="item o categoria">
+          </div>
+      </div>
+      <div class="filtro-ordenar" >
+              <h1>ORDENAR POR </h1>
+              <input type="text" placeholder="Mayor a menor" >
+      </div>
+      <div class="filtro-precio">
+          <h1>PRECIO</h1>
+            <div>
+              <label class="minMax">
+             <p>min <input type="number" placeholder="0">- max <input type="number" placeholder="0"></p> 
+              </label>
+            </div>
+      </div>
+      <div class="filtro-varios">
+          <h1>FILTRAR</h1>
+              <div>
+              <label class="checkboxNuevos">
+                  <input type="checkbox" >NUEVOS
+              </label>
+            </div>
+            <div>
+              <label class="checkboxOfertas">
+                  <input type="checkbox" >OFERTAS 
+              </label>
+            </div>
+            <div>
+              <label class="checkboxEdicionEspecial">
+                  <input type="checkbox" >EDICION ESPECIAL
+              </label>
+            </div>
+            <div>
+              <label class="checkboxFavoritos">
+                  <input type="checkbox" >FAVORITOS
+              </label>
+            </div>     
+      </div>     
+    </article>
+    <article class="prod-1-fila-1">
+      <div class="prod-1-text">
+        <button>NUEVO</button>
+      </div> 
+      <a class="enlace-imagen" href="item.html">
+      <picture class="prod-1-img" >
+          <img class="imagen-normal"  src="../images\star-wars\trooper-1.webp" alt="star wars trooper-1"></img>
+          <img class="imagen-hover" src="../images\star-wars\trooper-box.webp" alt="star wars trooper-1-box"></img>
+      </picture>
+    </a>
+      <div class="prod-des-1-fila-1" >
+              <h1 class="desc-1-fila-1">STAR WARS</h1>
+              <h2 class="desc-2-fila-1">STORMTROOPER LIGHTSABER</h2>
+              <p class="desc-3-fila-1">$ 1799,99</p>
+              <p class="desc-4-fila-1">3 CUOTAS SIN INTERÉS</p>   
+      </div> 
+    </article>
+    <article class="prod-2-fila-1">
+      <div class="prod-2-text">
+        <button>NUEVO</button>
+      </div> 
+      <a class="enlace-imagen" href="item.html">
+        <picture class="prod-1-img" >
+            <img class="imagen-normal"  src="../images\pokemon\pidgeotto-1.webp" alt="pidgeotto-1-pokemon"></img>
+            <img class="imagen-hover" src="../images\pokemon\pidgeotto-box.webp" alt="pdigeotto-1-pokemon-box"></img>
+        </picture>
+      </a>
+      <div class="prod-des-2-fila-1">
+              <h1 class="desc-1-fila-1">POKEMON</h1>
+              <h2 class="desc-2-fila-1">PIDGEOTTO</h2>
+              <p class="desc-3-fila-1"> $ 1799,99</p>
+              <p class="desc-4-fila-1">3 CUOTAS SIN INTERÉS</p>  
+      </div>
+    </article> 
+    <article class="prod-3-fila-1">
+      <div class="prod-3-text">
+        <button>NUEVO</button>
+      </div>  
+      <a class="enlace-imagen" href="item.html">
+        <picture class="prod-1-img" >
+            <img class="imagen-normal"  src="../images\harry-potter\luna-1.webp" alt="luna-harry-potter-1"></img>
+            <img class="imagen-hover" src="../images\harry-potter\luna-box.webp" alt="luna-harry.potter-box"></img>
+        </picture>
+      </a>
+      <div class="prod-des-3-fila-1" >
+              <h1 class="desc-1-fila-1">HARRY POTTER</h1>
+              <h2 class="desc-2-fila-1">LUNA LOVEGOOD LION MASK</h2>                    
+              <p class="desc-3-fila-1">$ 1799,99</p>
+              <p class="desc-4-fila-1">3 CUOTAS SIN INTERÉS</p>   
+      </div>
+    </article>
+    </div>  
+    <div class="fila-2">
+      <article class="prod-1-fila-2">
+        <div class="prod-1-2-text">   
+          <button>NUEVO</button>
+        </div> 
+        <a class="enlace-imagen" href="item.html">
+          <picture class="prod-1-img" >
+              <img class="imagen-normal"  src="../images\star-wars\trooper-1.webp" alt="star wars trooper-1"></img>
+              <img class="imagen-hover" src="../images\star-wars\trooper-box.webp" alt="star wars trooper-1-box"></img>
+          </picture>
+        </a>
+      <div class="prod-des-4-fila-2" >
+              <h1 class="desc-1-fila-2">STAR WARS</h1>
+              <h2 class="desc-2-fila-2">STORMTROOPER LIGHTSABER</h2>
+              <p class="desc-3-fila-2">$ 1799,99</p>
+              <p class="desc-4-fila-2">3 CUOTAS SIN INTERÉS</p>   
+      </div>    
+    </article>
+    <article class="prod-2-fila-2"> 
+      <div class="prod-2-2-text">
+        <button>NUEVO</button>
+      </div> 
+      <a class="enlace-imagen" href="item.html">
+        <picture class="prod-1-img" >
+          <img class="imagen-normal"  src="../images\pokemon\pidgeotto-1.webp" alt="pidgeotto-1-pokemon"></img>
+          <img class="imagen-hover" src="../images\pokemon\pidgeotto-box.webp" alt="pdigeotto-1-pokemon-box"></img>
+        </picture>
+      </a>  
+      <div class="prod-des-5-fila-2">
+              <h1 class="desc-1-fila-2">POKEMON</h1>
+              <h2 class="desc-2-fila-2">PIDGEOTTO</h2>
+              <p class="desc-3-fila-2">$ 1799,99</p>
+              <p class="desc-4-fila-2">3 CUOTAS SIN INTERÉS</p>  
+      </div> 
+    </article>
+    <article class="prod-3-fila-2"> 
+      <div class="prod-3-2-text">
+        <button>NUEVO</button>
+      </div> 
+      <a class="enlace-imagen" href="item.html">
+        <picture class="prod-1-img" >
+          <img class="imagen-normal"  src="../images\harry-potter\luna-1.webp" alt="luna-harry-potter-1"></img>
+          <img class="imagen-hover" src="../images\harry-potter\luna-box.webp" alt="luna-harry.potter-box"></img>
+        </picture>
+      </a>
+      <div class="prod-des-6-fila-2" >
+              <h1 class="desc-1-fila-2">HARRY POTTER</h1>
+              <h2 class="desc-2-fila-2">LUNA LOVEGOOD LION MASK</h2>                    
+              <p class="desc-3-fila-2">$ 1799,99</p>
+              <p class="desc-4-fila-2">3 CUOTAS SIN INTERÉS</p>   
+      </div>  
+    </article> 
+    </div>  
+    <div class="fila-3">        
+    <article class="prod-1-fila-3">
+      <div class="prod-1-3-text">
+        <button>NUEVO</button>
+      </div> 
+      <a class="enlace-imagen" href="item.html">
+        <picture class="prod-1-img" >
+            <img class="imagen-normal"  src="../images\star-wars\trooper-1.webp" alt="star wars trooper-1"></img>
+            <img class="imagen-hover" src="../images\star-wars\trooper-box.webp" alt="star wars trooper-1-box"></img>
+        </picture>
+      </a>
+      <div class="prod-des-7-fila-3">
+              <h1 class="desc-1-fila-3">STAR WARS</h1>
+              <h2 class="desc-2-fila-3">STORMTROOPER LIGHTSABER</h2>
+              <p class="desc-3-fila-3">$ 1799,99</p>
+              <p class="desc-4-fila-3">3 CUOTAS SIN INTERÉS</p>   
+      </div>
+        </article> 
+        <article class="prod-2-fila-3">
+          <div class="prod-2-3-text">
+            <button>NUEVO</button>  
+            </div>  
+            <a class="enlace-imagen" href="item.html">
+              <picture class="prod-1-img" >
+                <img class="imagen-normal"  src="../images\pokemon\pidgeotto-1.webp" alt="pidgeotto-1-pokemon"></img>
+                <img class="imagen-hover" src="../images\pokemon\pidgeotto-box.webp" alt="pdigeotto-1-pokemon-box"></img>
+              </picture>
+            </a>
+      <div class="prod-des-8-fila-3" >
+              <h1 class="desc-1-fila-3">POKEMON</h1>
+              <h2 class="desc-2-fila-3">PIDGEOTTO</h2>
+              <p class="desc-3-fila-3">$ 1799,99</p>
+              <p class="desc-4-fila-3">3 CUOTAS SIN INTERÉS</p>  
+      </div> 
+    </article>
+    <article class="prod-3-fila-3">   
+      <div class="prod-3-3-text">
+        <button>NUEVO</button>
+      </div>
+      <a class="enlace-imagen" href="item.html">
+        <picture class="prod-1-img" >
+          <img class="imagen-normal"  src="../images\harry-potter\luna-1.webp" alt="luna-harry-potter-1"></img>
+          <img class="imagen-hover" src="../images\harry-potter\luna-box.webp" alt="luna-harry.potter-box"></img>
+      </a>
+        <div class="prod-des-9-fila-3">
+              <h1 class="desc-1-fila-3">HARRY POTTER</h1>
+              <h2 class="desc-2-fila-3">LUNA LOVEGOOD LION MASK</h2>                    
+              <p class="desc-3-fila-3">$ 1799,99</p>
+              <p class="desc-4-fila-3">3 CUOTAS SIN INTERÉS</p>   
+          </div>
+      </article>
+    </div>
+  </article>
+  </div>                 
+  </section>
+   <div class="numeracion-paginas">
+  <label>
+    <button><</button>
+    <button>1</button>
+    <button>2</button>
+    <button>...</button>
+    <button>9</button>
+    <button>10</button>
+    <button>></button>
+</label>
+ </div> 
+</main>
+<%- include('partials/shop/footer') %>
+  </body>
+</html>
