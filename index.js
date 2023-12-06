@@ -6,6 +6,13 @@ const shopRoutes= require('./src/routes/shopRoutes');
 const adminRoutes= require('./src/routes/adminRoutes');
 const authRoutes = require('./src/routes/authRoutes');
 const path = require('path');
+const session = require("cookie-session");
+
+app.use(
+  session({
+    keys: ["S3cr3t01", "S3cr3t02"],
+  })
+);
 
 
 app.use(express.static(path.join(__dirname, "/public")));
@@ -27,3 +34,4 @@ app.use((req, res, next) => {
 
 
 app.listen(4000,()=>console.log("Servidor corriendo en http://localhost:4000"));
+

@@ -1,6 +1,8 @@
 const express= require('express');
 const router= express.Router();
 const adminControllers= require('../controllers/adminController');
+const multer = require("multer");
+const upload = multer({ storage: multer.memoryStorage() });
 
 
 router.get('/admin',adminControllers.admin);
