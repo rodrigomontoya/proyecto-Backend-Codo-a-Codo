@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="../css/style.css">
+    <title>Cart</title>
+  </head>
+  <body class="cuerpo">
+    <%- include('../partials/shop/header') %>
+    <main class="container-carrito">
+      <section class="carrito">
+        <div class="carrito-titulo">
+          <h1>CARRITO DE COMPRAS</h1>  
+        </div>
+          <section class="cart-productos">
+             <article class="cart-prod-fila-1">
+            <div class="div-1">
+              <div class="titulo">DETALLE DE PRODUCTO</div>
+             </div>
+            <div class="div-2">
+              <div class="titulo">CANTIDAD</div>
+             </div>
+            <div class="div-3">
+              <div class="titulo">TOTAL</div>
+             </div>
+            <div class="div-4"> 
+              <!-- vacio -->
+            </div> 
+          </article>
+          <article class="cart-prod-fila-2 cart-prod-fila">
+            <div class="div-5">
+              <div class="img-div-5">
+                <img  src="../images/star-wars/baby-yoda-1.webp" alt="baby yoda">
+              </div>
+              <div class="descripcion">
+                <h3 class="desc-1">BABY YODA BLUEBALL</h3>
+                <p class="desc-2">STAR WARS</p>
+                <p class="desc-3">Precio: $<span class="precioUnitario">1799.99</span>
+                </p>
+            </div>
+             </div>
+            <div class="div-6">
+              <div class="producto-cantidad ">
+                <input type="number" placeholder="0" readonly  >
+                <div class="botones-cant">
+                  <button class="increment-button">+</button>
+                  <button class="decrement-button">-</button>
+              </div>
+            </div>
+             </div>
+            <div class="div-7">
+              <div class="producto-total">
+                <p><span>0</span></p>
+                </div>
+             </div>
+            <div class="div-8"> 
+              <div class="producto-eliminar">
+                <img  src="../images\icons\delete-cart.svg" alt="icono borrar item">
+            </div>
+            </div>
+          </article>
+          <article class="cart-prod-fila-3 cart-prod-fila">
+            <div class="div-9">
+              <div class="img-div-9">
+                <img  src="../images/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Pidgeotto de la serie Pokémon">
+               </div>
+               <div class="descripcion ">
+                <h3 class="desc-1">PIDGEOTTO</h3>
+                <p class="desc-2">POKÉMON</p>
+                <p class="desc-3">Precio: $<span class="precioUnitario">1799.99</span></p>
+            </div>
+             </div>
+            <div class="div-10">
+              <div class="producto-cantidad ">
+                <input type="number" placeholder="0" readonly >
+                <div class="botones-cant">
+                  <button class="increment-button">+</button>
+                  <button class="decrement-button">-</button>
+              </div>
+            </div>
+             </div>
+            <div class="div-11">
+              <div class="producto-total ">
+                <p><span>0</span></p>
+            </div>
+             </div>
+            <div class="div-12">
+              <div class="producto-eliminar">
+                <img  src="../images\icons\delete-cart.svg" alt="icono borrar item">
+            </div>
+             </div>
+            </article>
+            </section>  
+      <section class="resumen">
+        <div class="resumen-titulo">
+        <h2>RESUMEN</h2>
+        </div>
+        <div class="resumen-descripcion">
+          <div class="resumen-cant-fila-1">
+            <strong class="desc-titulo">CANTIDAD DE ELEMENTOS</strong>
+          </div>
+          <div class="cant-fila-1">
+            <span class="desc-numero" >0</span>
+          </div>
+          <div class="resumen-subtotal-fila-2">
+            <strong class="desc-titulo">SUBTOTAL</strong>
+          </div>
+          <div class="subtotal-fila-2">
+            <span class="desc-numero">$0.00</span>
+          </div>
+          <div class="resumen-envio-fila-3">
+              <strong class="desc-titulo">ENVÍO</strong>
+          </div>
+          <div class="envio-fila-3">
+            <span class="desc-numero">$0.00</span>
+        </div>
+
+          <div class="resumen-total-fila-4">
+            <strong>TOTAL</strong> 
+          </div>
+          <div class="total-fila-4">
+            <span >$0.00</span>
+        </div>
+        </div>
+        <div class="boton-pagar">
+        <button >IR A PAGAR</button>
+      </div>
+      </section>
+  </main>
+  <%- include('../partials/shop/footer') %>
+    <script src="../script/cart.js"></script>
+  </body>
+</html>

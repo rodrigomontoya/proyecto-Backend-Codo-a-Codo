@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Login</title>
+  </head>
+  <body class="cuerpo">
+    <%- include('../partials/admin/header') %>
+    <main>
+      <div class="login">
+        <div class="login-titulo">
+          <h1>INICIAR SESIÓN</h1>
+        </div>
+        <section class="container-form">
+          <form method="get" class="form-login">
+            <div class="div1">
+              <label for="usuario">Nombre de Usuario: </label>
+            </div>
+            <div class="div2">
+              <input
+                type="text"
+                placeholder="Escriba su Usuario"
+                name="usuario"
+                required
+              />
+            </div>
+            <div class="div3"><label for="contrasena">Contraseña:</label></div>
+            <div class="div4">
+              <input type="password" name="contrasena" required />
+            </div>
+            <div class="div5">
+              <label>
+                <input type="checkbox" name="recordar" /> Recordar mi contraseña
+              </label>
+            </div>
+            <div class="div6">
+              <a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="div7"><p>¿No tienes una cuenta?</p></div>
+            <div class="div8"><a href="register.html">Regístrate aquí</a></div>
+          </form>
+        </section>
+
+        <div class="boton-iniciar-sesion">
+          <button type="submit">Entrar</button>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/admin/footer') %>
+  </body>
+</html>

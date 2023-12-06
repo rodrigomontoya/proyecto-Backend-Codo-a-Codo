@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel="stylesheet"  href="./css/style.css">
+    <title>Home|FunkShop</title>
+  </head>
+  <body class="cuerpo">
+    <%- include('../partials/shop/header') %>
+    <main class="cuerpo">
+      <section class="banner">
+        <article >
+          <div class="descripcionBanner">
+          <h3>Nuevos Ingresos</h3>
+          <p>Descubri el proximo Funko Pop de tu colección</p>
+        </div>
+          <div class="botonShop">
+          <a class="boton" href="./pages/shop.html">SHOP</a>
+        </div>
+        </article>
+      </section>
+      <div class="productos">
+      <section class="producto-1">
+        <article class="producto-1-descripcion">
+          <div class="producto-1-detalle">
+          <h3>STAR WARS & MANDALORIAN</h3>
+          <p>Disfruta de una saga que sigue agregando personajes a su colección</p>
+          </div>
+          <picture class="producto-1-linea">
+          <img src="./images/icons/Linea.svg" alt="linea decorativa">
+        </picture>
+        <div class="producto-1-boton">
+          <a href="./pages/shop.html">VER COLECCIÓN</a>
+        </div>
+        </article>
+        <div class="container-img-1">
+        <picture class="producto-1-imagen">
+        <img src="images\star-wars\baby-yoda-1.webp" alt="Figura coleccionable de Funko de Star Wars" />
+        </a>
+      </picture>
+      </div>
+    </section>
+
+      <section class="producto-2" >
+        <picture class="producto-2-imagen">
+        <img src="images\pokemon\vulpix-1.webp" alt="Figura coleccionable de Funko de Pokemón" />
+      </picture>
+        </a>
+        <article class="producto-2-descripcion">
+          <div class="producto-2-detalle">
+          <h3>POKEMON INDIGO</h3>
+          <p>Atrapa todos los que puedas y disfruta de una colección llena de amigos</p>
+        </div>
+        <div class="container-img-2">
+          <picture class="producto-2-linea">
+            <img src="./images/icons/Linea.svg" alt="linea decorativa">
+          </picture>
+        </div>
+          <div class="producto-2-boton">
+          <a href="./pages/shop.html">VER COLECCIÓN</a>
+        </article>
+      </section>
+      <section class="producto-3">
+        <article class="producto-3-descripcion">
+      <div class="producto-3-detalle">
+        <h3>HARRY POTTER</h3>
+        <p>Revive los recuerdos de una saga llena de magia y encanto</p>
+      </div>
+      <div class="container-img-3">
+       <picture class="producto-3-linea">
+        <img src="./images/icons/Linea.svg" alt="linea decorativa">
+      </picture>
+    </div>
+        <div class="producto-3-boton">
+          <a href="./pages/shop.html">VER COLECCIÓN</a>
+        </div>
+        </article>
+          <picture class="producto-3-imagen">
+        <img src="images\harry-potter\snape-patronus-1.webp" alt="Figura coleccionable de Funko de Harry Potter" />
+      </picture>
+    </a>
+      </section>
+      </div>
+      <section class="ult-lanz glide">
+        <div class="ult-lanz-titulo">
+        <h2>ÚLTIMOS LANZAMIENTOS</h2>
+      </div>
+      <div class="glide__track"  data-glide-el="track">
+       <ul class="glide__slides">
+        <li  class="glide__slide">
+          <article class="lanz-1">
+            <div class="lanz-1-img-text">
+              <div>
+              <button>NUEVO</button>
+              </div>
+            </div>
+            <a class="enlace-imagen"  href="">
+              <picture class="lanz-1-img">
+                <img class="imagen-normal"  src="../images\star-wars\trooper-1.webp" alt="star wars trooper-1"></img>
+               <img class="imagen-hover" src="../images\star-wars\trooper-box.webp" alt="star wars trooper-1-box"></img>
+              </picture>
+            <div class="lanz-1-desc">
+              <p class="lanz-1-desc-1">STAR WARS</p>
+              <h4 class="lanz-1-desc-2">STORMTROPPER LIGHTSABER</h4>
+              <p class="lanz-1-desc-3">$ 1799,99</p>
+              <p class=" lanz-1-desc-4">3 CUOTAS SIN INTERÉS</p>
+            </div>
+          </a>
+          </article>
+        </li>
+        <li  class="glide__slide">
+          <article class="lanz-2">
+            <div class="lanz-2-img-text">
+              <div>
+              <button>NUEVO</button>
+            </div>
+            </div>
+            <a class="enlace-imagen"  href="">
+              <picture class="lanz-2-img">
+                <img class="imagen-normal"  src="../images\pokemon\pidgeotto-1.webp" alt="pidgeotto-1-pokemon"></img>
+                <img class="imagen-hover" src="../images\pokemon\pidgeotto-box.webp" alt="pdigeotto-1-pokemon-box"></img>
+              </picture>
+            <div class="lanz-2-desc">
+              <p class="lanz-2-desc-1">POKEMON</p>
+              <h4 class="lanz-2-desc-2">PIDGEOTTO</h4>
+              <p class="lanz-2-desc-3">$ 1799,99</p>
+              <p class="lanz-2-desc-4">3 CUOTAS SIN INTERÉS</p>
+            </div>
+          </a>
+          </article>
+        </li>
+        <li  class="glide__slide">
+          <article class="lanz-3">
+            <div class="lanz-3-img-text">
+              <div>
+              <button>NUEVO</button>
+            </div>
+            </div>
+            <a class="enlace-imagen"  href="">
+              <picture class="lanz-3-img">
+                <img class="imagen-normal"  src="../images\harry-potter\luna-1.webp" alt="luna-harry-potter-1"></img>
+                <img class="imagen-hover" src="../images\harry-potter\luna-box.webp" alt="luna-harry.potter-box"></img>
+              </picture>
+            <div class="lanz-3-desc">
+              <p class="lanz-3-desc-1">HARRY POTTER</p>
+              <h4 class="lanz-3-desc-2">LUNA LOVEGOOD LION MASK </h4>
+              <p class="lanz-3-desc-3"> $ 1799,99</p>
+              <p class="lanz-3-desc-4">3 CUOTAS SIN INTERÉS</p>
+            </div>
+          </a>
+          </article>
+        </li>
+       </ul>
+      </div>
+      <div  class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left"  data-glide-dir="<"><iconify-icon icon="mdi:chevron-left"></iconify-icon></button>
+        <button  class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon icon="mdi:chevron-right"></iconify-icon></button>
+      </div>
+      </section>
+    </main>
+    <%- include('../partials/shop/footer') %>
+    <script>src="./script\script.js"</script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      new Glide('.glide',
+      {
+      type: 'carousel',
+      startAt: 0,
+      perView: 3,
+      gap: 30,
+      breakpoints: {
+      991: {
+      perView: 2
+      },
+      768: {
+      perView: 2
+      },
+      468:{
+        perView:1
+      }
+      }
+      }
+      ).mount();
+      </script>
+  </body>
+</html>

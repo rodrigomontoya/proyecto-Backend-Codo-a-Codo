@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Create</title>
+  </head>
+  <body>
+    <%- include('../partials/admin/header') %>
+    <main>
+      <div>
+      <h1 class="titulo-create">CREAR NUEVO ITEM</h1>
+    </div>
+      <section class="container-create">
+        <article class="categ-lic">
+        <div>
+          <label>Categoría:</label>
+          <select required>
+            <option selected disabled value="">Elegir</option>
+            <option>Figuras</option>
+            <option>Figuras</option>
+            <option>Figuras</option>
+            <!-- no se que opciones colocar-->
+          </select>
+        </div>
+        <div>
+          <label>Licencia:</label>
+          <select required>
+            <option selected disabled value="">Elegir</option>
+            <option>Harry Potter</option>
+            <option>Star Wars</option>
+            <option>Pokemon</option>
+          </select>
+        </div>
+      </article>
+        <article class="nombre-producto-container">
+        <div class="nombre-producto">
+          <label>Nombre del Producto</label>
+          <input type="text" placeholder="Ingrese el nombre " />
+        </div>
+        <div class="desc-container">
+          <textarea placeholder="Descripción del Producto"></textarea>
+        </div>
+        </div>
+      </article>
+          
+      <article class="sku-pre-stock-container">
+        <div>
+          <label>SKU</label>
+          <input type="text" placeholder="SSK111AB001 " />
+        </div>
+        <div>
+          <label>Precio</label>
+          <input  type="number" placeholder="$ 0.000,00" />
+        </div>
+        <div>
+          <label>Stock</label>
+          <input class="input-stock" type="number" placeholder="0 " />
+        </div>
+      </article>
+      <article class="desc-cuotas-container">
+        <div>
+          <label>Descuentos</label>
+          <input type="number" placeholder="0%" />
+        </div>
+        <div>
+          <label>Cuotas</label>
+          <select required>
+            <option selected disabled value="">Elegir</option>
+            <option>3 cuotas sin interés</option>
+            <option>6 cuotas sin interés</option>
+            <option>12 cuotas sin interés</option>
+          </select>
+        </div>
+      </article>
+        <div class="img-archivo-container">
+          <label>Imágenes</label>
+          <input
+            type="file"
+            id="imagen"
+            name="imagen"
+            accept="image/*"
+            required
+          />
+        </div>
+        <article class="botones-container">
+        <div>
+          <button class=" agregar-producto"type="submit">Agregar Producto</button>
+        </div>
+        <div>
+          <button class="limpiar "type="reset">Limpiar</button>
+        </div>
+      </article>
+      </section>
+    </main>
+    <%- include('../partials/admin/footer') %>
+  </body>
+</html>
