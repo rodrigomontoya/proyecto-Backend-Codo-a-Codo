@@ -20,88 +20,101 @@
       <div>
       <h1 class="titulo-create">CREAR NUEVO ITEM</h1>
     </div>
+   
       <section class="container-create">
-        <article class="categ-lic">
-        <div>
-          <label>Categoría:</label>
-          <select required>
-            <option selected disabled value="">Elegir</option>
-            <option>Figuras</option>
-            <option>Figuras</option>
-            <option>Figuras</option>
-            <!-- no se que opciones colocar-->
-          </select>
-        </div>
-        <div>
-          <label>Licencia:</label>
-          <select required>
-            <option selected disabled value="">Elegir</option>
-            <option>Harry Potter</option>
-            <option>Star Wars</option>
-            <option>Pokemon</option>
-          </select>
-        </div>
-      </article>
-        <article class="nombre-producto-container">
-        <div class="nombre-producto">
-          <label>Nombre del Producto</label>
-          <input type="text" placeholder="Ingrese el nombre " />
-        </div>
-        <div class="desc-container">
-          <textarea placeholder="Descripción del Producto"></textarea>
-        </div>
-        </div>
-      </article>
+        <form action="/admin" method="post" enctype="multipart/form-data">
+          <article class="categ-lic">
+            <div>
+              <label>Categoría:</label>
+              <select required name="categoria">
+                <option selected disabled value="">Elegir</option>
+                <option>Figuras</option>
+                <option>Figuras</option>
+                <option>Figuras</option>
+                <!-- no se qué opciones colocar-->
+              </select>
+            </div>
+            <div>
+              <label>Licencia:</label>
+              <select required name="licencia">
+                <option selected disabled value="">Elegir</option>
+                <option>Harry Potter</option>
+                <option>Star Wars</option>
+                <option>Pokemon</option>
+              </select>
+            </div>
+          </article>
+
+          <article class="nombre-producto-container">
+            <div class="nombre-producto">
+              <label>Nombre del Producto</label>
+              <input type="text" name="nombre" placeholder="Ingrese el nombre " />
+            </div>
+            <div class="desc-container">
+              <textarea name="descripcion" placeholder="Descripción del Producto"></textarea>
+            </div>
+          </article>
           
-      <article class="sku-pre-stock-container">
-        <div>
-          <label>SKU</label>
-          <input type="text" placeholder="SSK111AB001 " />
-        </div>
-        <div>
-          <label>Precio</label>
-          <input  type="number" placeholder="$ 0.000,00" />
-        </div>
-        <div>
-          <label>Stock</label>
-          <input class="input-stock" type="number" placeholder="0 " />
-        </div>
-      </article>
-      <article class="desc-cuotas-container">
-        <div>
-          <label>Descuentos</label>
-          <input type="number" placeholder="0%" />
-        </div>
-        <div>
-          <label>Cuotas</label>
-          <select required>
-            <option selected disabled value="">Elegir</option>
-            <option>3 cuotas sin interés</option>
-            <option>6 cuotas sin interés</option>
-            <option>12 cuotas sin interés</option>
-          </select>
-        </div>
-      </article>
-        <div class="img-archivo-container">
-          <label>Imágenes</label>
-          <input
-            type="file"
-            id="imagen"
-            name="imagen"
-            accept="image/*"
-            required
-          />
-        </div>
-        <article class="botones-container">
-        <div>
-          <button class=" agregar-producto"type="submit">Agregar Producto</button>
-        </div>
-        <div>
-          <button class="limpiar "type="reset">Limpiar</button>
-        </div>
-      </article>
-      </section>
+          <article class="sku-pre-stock-container">
+            <div>
+              <label>SKU</label>
+              <input type="text" name="sku" placeholder="SSK111AB001 " />
+            </div>
+            <div>
+              <label>Precio</label>
+              <input type="number" name="precio" placeholder="$ 0.000,00" />
+            </div>
+            <div>
+              <label>Stock</label>
+              <input class="input-stock" type="number" name="stock" placeholder="0" />
+            </div>
+          </article>
+
+          <article class="desc-cuotas-container">
+            <div>
+              <label>Descuentos</label>
+              <input type="number" name="descuentos" placeholder="0%" />
+            </div>
+            <div>
+              <label>Cuotas</label>
+              <select required name="cuotas">
+                <option selected disabled value="">Elegir</option>
+                <option>3 cuotas sin interés</option>
+                <option>6 cuotas sin interés</option>
+                <option>12 cuotas sin interés</option>
+              </select>
+            </div>
+          </article>
+
+          <div class="img-archivo-container">
+            <label>Imágenes</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required />
+          </div>
+
+          <article class="botones-container">
+            <div>
+              <button class="agregar-producto" type="submit" onclick="deshabilitarBoton()">Agregar Producto</button>
+            </div>
+            <div>
+              <button class="limpiar" type="reset">Limpiar</button>
+            </div>
+          </article>
+        </form>
     </main>
     <%- include('../partials/admin/footer') %>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  // Espera a que el DOM esté completamente cargado
+
+  // Selecciona el botón por su id
+  var btnAgregarProducto = document.getElementById("btnAgregarProducto");
+
+  // Agrega un evento de clic al botón
+  btnAgregarProducto.addEventListener("click", function () {
+    // Desactiva el botón después de hacer clic
+    btnAgregarProducto.disabled = true;
+  });
+});
+    </script>
   </body>
 </html>

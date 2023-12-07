@@ -7,6 +7,11 @@ const adminRoutes= require('./src/routes/adminRoutes');
 const authRoutes = require('./src/routes/authRoutes');
 const path = require('path');
 const session = require("cookie-session");
+const multer = require('multer');
+
+// Configuración de Multer
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 app.use(
   session({
