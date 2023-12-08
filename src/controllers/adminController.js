@@ -1,5 +1,6 @@
 const path = require("path");
 const sharp = require("sharp");
+const { validationResult } = require("express-validator");
 
 
   const admin = (req, res) => {
