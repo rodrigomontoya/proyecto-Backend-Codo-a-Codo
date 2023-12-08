@@ -11,35 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Edit</title>
   </head>
   <body>
-    <header class="encabezado">
-      <article class="logo">
-        <a href="/index.html">
-          <picture>
-            <img
-              src="../../images\branding\logo_light_horizontal.svg"
-              alt="Logo de Empresa"
-            />
-          </picture>
-        </a>
-      </article>
-      <article class="barra_navegacion">
-        <nav>
-          <ul class="menu">
-            <li>
-              <a href="/pages\shop.html">VER TIENDA</a>
-            </li>
-            <li>
-              <a class="item-submenu" href="admin.html">ADMIN</a>
-            </li>
-            <li><a class="item-submenu" href="/index.html">SALIR</a></li>
-          </ul>
-        </nav>
-      </article>
-    </header>
+    <%- include('../partials/admin/header') %>
     <main>
       <section class="edit-container">
         <div>
@@ -69,7 +45,7 @@
         <article class="nomb-container">
           <div>
             <label>Nombre del Producto:</label>
-            <input type="text" placeholder="Ingrese el nombre " />
+            <input type="text" placeholder="Ingrese el nombre " name="nombre"  />
           </div>
           <div class="descrip-container">
             <textarea placeholder="Descripción del Producto"></textarea>
@@ -116,11 +92,11 @@
         </div>
         <article class="images-container">
           <div class="container-1">
-            <img  class="img-1" src="../../images\naruto\kakashi_hatake_front.svg" />
+            <img  class="img-1" src="/images\naruto\kakashi_hatake_front.svg" />
             <p>Frente</p>
           </div>
           <div class="container-2">
-            <img  class="img-2 "src="../../images\naruto\kakashi_hatake_back.svg" />
+            <img  class="img-2 "src="/images\naruto\kakashi_hatake_back.svg" />
             <p>Dorso</p>
           </div>
         </article>
@@ -129,24 +105,6 @@
         </div>
       </section>
     </main>
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="/pages/shop.html">SHOP</a></li>
-          <li><a href="/pages/register.html">REGISTRARSE</a></li>
-          <li><a href="/pages/login.html">LOGIN</a></li>
-          <li><a href="/pages/contact.html">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <section class="copyright">
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
-      </section>
-      <picture class="footer-logo">
-        <img
-          src="../../images\branding\isotype.svg"
-          alt="Isotipo de la marca de FunkoShop"
-        />
-      </picture>
-    </footer>
+    <%- include('../partials/admin/footer') %>
   </body>
 </html>

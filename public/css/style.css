@@ -3302,6 +3302,7 @@ color: #B9B9B9;
 .botones-container{
     display: flex;
     gap:4em;
+    
 }
 
 .img-archivo-container{
@@ -3377,6 +3378,16 @@ color: black;
  letter-spacing: 0.96px;
  word-wrap: break-word;
  }
+
+ .cat-licen-container select{
+    color: #1F1F1F;
+    font-size: .9em;
+    font-family: Inter;
+    font-weight: 500;
+    word-wrap: break-word;
+    width: 10em;
+ }
+
  .nomb-container{
     display:flex;
     flex-direction: column;
@@ -3390,6 +3401,8 @@ color: black;
  letter-spacing: 0.96px;
  word-wrap: break-word;
  }
+
+
 
  .nomb-container input{
     color: #1F1F1F;
