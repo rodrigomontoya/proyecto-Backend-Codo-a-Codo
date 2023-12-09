@@ -8,6 +8,7 @@ const authRoutes = require('./src/routes/authRoutes');
 const path = require('path');
 const session = require("cookie-session");
 const multer = require('multer');
+const sequelize = require("./src/models/connection");
 
 // Configuración de Multer
 const storage = multer.memoryStorage();
@@ -38,5 +39,14 @@ app.use((req, res, next) => {
 
 
 
-app.listen(4000,()=>console.log("Servidor corriendo en http://localhost:4000"));
+app.listen(4000,async ()=>{
+
+  try {
+    await sequelize.authenticate();
+  } catch (error) {
+    console.log(error);
+  }
+
+  console.log("Servidor corriendo en http://localhost:4000")
+});
 
