@@ -13,6 +13,32 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Create</title>
+    <style>
+      .error-container {
+        background-color: #ffeeee;
+        border: 1px solid #ff5c5c;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+    
+      .error-title {
+        font-weight: bold;
+        color: #ff5c5c;
+        margin-bottom: 5px;
+      }
+    
+      .error-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .error-item {
+        color: #ff5c5c;
+        margin-bottom: 5px;
+      }
+    </style>
   </head>
   <body>
     <%- include('../partials/admin/header') %>
@@ -21,6 +47,16 @@
       <h1 class="titulo-create">CREAR NUEVO ITEM</h1>
     </div>
    
+    <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+      <div class="error-container">
+        <p class="error-title">Errores encontrados:</p>
+        <ul class="error-list">
+          <% errors.forEach(error => { %>
+            <li class="error-item"><%= error.msg %></li>
+          <% }); %>
+        </ul>
+      </div>
+    <% } %>
       <section class="container-create">
         <form action="/admin" method="post" enctype="multipart/form-data">
           <article class="categ-lic">
@@ -48,7 +84,8 @@
           <article class="nombre-producto-container">
             <div class="nombre-producto">
               <label>Nombre del Producto</label>
-              <input type="text" name="nombre" placeholder="Ingrese el nombre " />
+              <input type="text" name="nombre" placeholder="Ingrese el nombre " value="<%= typeof values != 'undefined' ? values.nombre : '' %>"
+              />
             </div>
             <div class="desc-container">
               <textarea name="descripcion" placeholder="Descripción del Producto"></textarea>
@@ -58,22 +95,26 @@
           <article class="sku-pre-stock-container">
             <div>
               <label>SKU</label>
-              <input type="text" name="sku" placeholder="SSK111AB001 " />
+              <input type="text" name="sku" placeholder="SSK111AB001 "  value="<%= typeof values != 'undefined' ? values.sku : '' %>"
+              />
             </div>
             <div>
               <label>Precio</label>
-              <input type="number" name="precio" placeholder="$ 0.000,00" />
+              <input type="number" name="precio" placeholder="$ 0.000,00"  value="<%= typeof values != 'undefined' ? values.precio : '' %>"
+              />
             </div>
             <div>
               <label>Stock</label>
-              <input class="input-stock" type="number" name="stock" placeholder="0" />
+              <input class="input-stock" type="number" name="stock" placeholder="0"  value="<%= typeof values != 'undefined' ? values.stock : '' %>"
+              />
             </div>
           </article>
 
           <article class="desc-cuotas-container">
             <div>
               <label>Descuentos</label>
-              <input type="number" name="descuentos" placeholder="0%" />
+              <input type="number" name="descuentos" placeholder="0%" value="<%= typeof values != 'undefined' ? values.descuentos : '' %>"
+              />
             </div>
             <div>
               <label>Cuotas</label>
@@ -88,7 +129,8 @@
 
           <div class="img-archivo-container">
             <label>Imágenes</label>
-            <input type="file" id="imagen" name="imagen" accept="image/*" />
+            <input type="file" id="imagen" name="imagen" accept="image/*" value="<%= typeof values != 'undefined' ? values.imagen : '' %>"
+            />
           </div>
 
           <article class="botones-container">

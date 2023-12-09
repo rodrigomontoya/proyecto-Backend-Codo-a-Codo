@@ -21,7 +21,15 @@ const validations = [
      .not()
      .isEmpty()
      .withMessage("El precio es obligatorio"),
-    
+     body("stock")
+     .not()
+     .isEmpty()
+     .withMessage("El stock es obligatorio"),
+     body("sku")
+     .not()
+     .isEmpty()
+     .withMessage("El sku es obligatorio"),
+   
   ];
 
 

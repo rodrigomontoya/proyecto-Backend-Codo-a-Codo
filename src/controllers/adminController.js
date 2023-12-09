@@ -13,6 +13,16 @@ const { validationResult } = require("express-validator");
   
   const adminCreatePost = (req, res) => {
     console.log( req.body,req.file);
+
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.render("admin/create", {
+        values: req.body,
+        errors: errors.array(),
+      });
+    }
+
     // sharp se usa para renderizar la imagen y que mejore el funcionamiento de la pagina
      //necesario el if para saber si estoy subiendo una imagen
     if(req.file){
@@ -23,8 +33,7 @@ const { validationResult } = require("express-validator");
     }
 
         res.send('Producto Creado');  
-   
-   
+    
   };
   
   const adminEditGet = (req, res) => {
