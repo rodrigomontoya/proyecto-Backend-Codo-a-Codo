@@ -1,19 +1,15 @@
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(
-"rodrigomontoya_proyectocodoacodo",
-"339567_rodrigo" ,
-  "pro4484894",
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
   {
-    host: "mysql-rodrigomontoya.alwaysdata.net",
-    dialectModule: require("mysql2"),
+    host: process.env.DB_HOST,
     dialect: "mysql",
   }
 );
 
 module.exports = sequelize;
 
-//rodrigomontoya_proyectocodoacodo  nombre de base datos
-//339567_rodrigo  usario 
-// pro4484894  contraseña 
-// mysql-rodrigomontoya.alwaysdata.net   host de base datos always 
+

@@ -1,10 +1,16 @@
 const path = require("path");
 const sharp = require("sharp");
 const { validationResult } = require("express-validator");
+const model = require("../models/Producto");
 
 
-  const admin = (req, res) => {
-    res.render("admin/admin");
+const admin = async (req, res) => {
+    try {
+      const productos = await model.findAll();
+      res.render("admin/admin", { productos });
+    } catch (error) {
+      res.status(500).send(error);
+    }
   };
   
   const adminCreateGet = (req, res) => {

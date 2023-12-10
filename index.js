@@ -1,4 +1,5 @@
 const express = require('express');
+require("dotenv").config();
 const app = express();
 const methodOverride = require("method-override");
 const mainRoutes= require('./src/routes/mainRoutes');

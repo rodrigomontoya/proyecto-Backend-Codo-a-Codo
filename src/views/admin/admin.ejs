@@ -47,10 +47,12 @@
         <th></th>
       </tr>
         <tr>
-          <td class="numeroDeProducto">1</td>
-          <td>STW001001</td>
-          <td>Baby Yoda Blueball</td>
-          <td>STAR WARS</td>
+          <% productos.forEach(producto => { %>
+              <td><%= producto.id %></td>
+              <td><%= producto.nombre %></td>
+              <td>$ <%= producto.precio %></td>
+             
+            <% }) %>
           <td><a href="http://localhost:4000/admin/create"><img src="/images/icons/edit_pencil.svg"></a>
           <td><img src="/images/icons/delete_trash.svg" id="deleteIcon" onclick="confirmarBorrado()" ></td>
         </tr>
