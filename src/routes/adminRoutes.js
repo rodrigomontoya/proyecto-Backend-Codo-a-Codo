@@ -13,10 +13,7 @@ const validations = [
       .withMessage("El nombre es obligatorio")
       .bail()
       .isLength({ min: 3 })
-      .withMessage("Tiene que tener 3 caracteres")
-      .bail()
-    .isAlpha()
-    .withMessage("Solo puede tener letras"),
+      .withMessage("Tiene que tener 3 caracteres"),
     body("precio")
      .not()
      .isEmpty()
@@ -28,7 +25,10 @@ const validations = [
      body("sku")
      .not()
      .isEmpty()
-     .withMessage("El sku es obligatorio"),
+     .withMessage("El sku es obligatorio")
+     .bail()
+     .isNumeric()
+     .withMessage('El sku debe contener solo números'),
    
   ];
 

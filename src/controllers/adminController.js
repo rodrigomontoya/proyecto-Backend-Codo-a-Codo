@@ -1,5 +1,9 @@
 const path = require("path");
-const sharp = require("sharp");
+//const sharp = require("sharp");
+if (!process.env.VERCEL) {
+    const sharp = require("sharp");
+}
+
 const { validationResult } = require("express-validator");
 const model = require("../models/Producto");
 
@@ -17,7 +21,7 @@ const admin = async (req, res) => {
     res.render('admin/create');
   };
   
-  const adminCreatePost = (req, res) => {
+  const adminCreatePost =  async (req, res) => {
     console.log( req.body,req.file);
 
     const errors = validationResult(req);
@@ -29,6 +33,14 @@ const admin = async (req, res) => {
       });
     }
 
+    try {
+        const producto = await model.create(req.body);
+        console.log(producto);
+    } catch (error) {
+        console.log(error)
+        res.status(500).send(error);
+        
+    }
     // sharp se usa para renderizar la imagen y que mejore el funcionamiento de la pagina
      //necesario el if para saber si estoy subiendo una imagen
     if(req.file){
