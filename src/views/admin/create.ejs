@@ -88,7 +88,7 @@
               />
             </div>
             <div class="desc-container">
-              <textarea name="descripcion" placeholder="Descripción del Producto"></textarea>
+              <textarea type="text" name="descripcion" placeholder="Descripción del Producto"  value="<%= typeof values != 'undefined' ? values.descripcion : '' %>"></textarea>
             </div>
           </article>
           

@@ -1,9 +1,5 @@
 const path = require("path");
-//const sharp = require("sharp");
-if (!process.env.VERCEL) {
-    const sharp = require("sharp");
-}
-
+const sharp = require("sharp");
 const { validationResult } = require("express-validator");
 const model = require("../models/Producto");
 
@@ -36,6 +32,39 @@ const admin = async (req, res) => {
     try {
         const producto = await model.create(req.body);
         console.log(producto);
+
+        /* if(req.file){
+            sharp(req.file.buffer)
+            .resize(300)
+            .toFile(
+                path.resolve(
+                  __dirname,
+                  `../../../public/uploads/producto_${producto.id}.jpg`
+                )
+              )
+            .catch((err) =>console.log(err));
+        } */
+        if (req.file) {
+            sharp(req.file.buffer)
+              .resize(300)
+              .toFile(
+                path.resolve(
+                  __dirname,
+                  `../../public/uploads/productos/producto_${producto.id}.jpg`
+                )
+              )
+              .then((info) => {
+                // La imagen se ha procesado correctamente
+                console.log('Imagen procesada con éxito', info);
+              })
+              .catch((err) => {
+                // Error al procesar la imagen
+                console.error('Error al procesar la imagen', err);
+                // Aquí podrías enviar una respuesta al cliente indicando el error
+              });
+          }
+          
+        res.redirect("/admin");
     } catch (error) {
         console.log(error)
         res.status(500).send(error);
@@ -43,14 +72,9 @@ const admin = async (req, res) => {
     }
     // sharp se usa para renderizar la imagen y que mejore el funcionamiento de la pagina
      //necesario el if para saber si estoy subiendo una imagen
-    if(req.file){
-        sharp(req.file.buffer)
-        .resize(300)
-        .toFile(path.resolve(__dirname,"../../public/uploads/producto1.jpg"))
-        .catch((err) =>console.log(err));
-    }
+   
 
-        res.send('Producto Creado');  
+    
     
   };
   
