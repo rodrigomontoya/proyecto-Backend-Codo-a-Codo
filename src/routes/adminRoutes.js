@@ -37,9 +37,9 @@ const validations = [
 router.get('/admin',adminControllers.admin);
 router.get('/admin/create',adminControllers.adminCreateGet);
 router.post('/admin',upload.single("imagen"),validations, adminControllers.adminCreatePost);
-router.get('/admin/edit/:id',adminControllers.adminEditGet);
-router.put('/admin/edit/:id',upload.single("imagen"),validations, adminControllers.adminEditPut);
-router.delete('/admin/delete/:id',adminControllers.adminDelete);
+router.get('/admin/:id/edit',adminControllers.adminEditGet);
+router.put('/admin/:id',upload.single("imagen"),validations, adminControllers.adminEditPut);
+router.delete('/admin/:id',adminControllers.adminDelete);
 
 
 

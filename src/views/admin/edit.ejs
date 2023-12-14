@@ -13,18 +13,55 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Edit</title>
+    <style>
+      .error-container {
+        background-color: #ffeeee;
+        border: 1px solid #ff5c5c;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+    
+      .error-title {
+        font-weight: bold;
+        color: #ff5c5c;
+        margin-bottom: 5px;
+      }
+    
+      .error-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .error-item {
+        color: #ff5c5c;
+        margin-bottom: 5px;
+      }
+    </style>
   </head>
   <body>
     <%- include('../partials/admin/header') %>
     <main>
+      <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+        <div class="error-container">
+          <p class="error-title">Errores encontrados:</p>
+          <ul class="error-list">
+            <% errors.forEach(error => { %>
+              <li class="error-item"><%= error.msg %></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
       <section class="edit-container">
-        <div>
+        <form action=""  method="post ">
+        <div>"
           <h1 class="titulo-edit">EDITAR ITEM</h1>
         </div>
         <article class="cat-licen-container">
           <div>
             <label>Categoría</label>
-            <select required>
+            <select >
               <option selected disabled value="">Elegir</option>
               <option>Figuras</option>
               <option>Figuras</option>
@@ -34,7 +71,7 @@
           </div>
           <div>
             <label>Licencia</label>
-            <select required>
+            <select >
               <option selected disabled value="">Elegir</option>
               <option>Harry Potter</option>
               <option>Star Wars</option>
@@ -45,34 +82,34 @@
         <article class="nomb-container">
           <div>
             <label>Nombre del Producto:</label>
-            <input type="text" placeholder="Ingrese el nombre " name="nombre"  />
+            <input type="text" placeholder="Ingrese el nombre " name="nombre" value="<%= typeof values != 'undefined' ? values.nombre : '' %>" />
           </div>
           <div class="descrip-container">
-            <textarea placeholder="Descripción del Producto"></textarea>
+            <textarea placeholder="Descripción del Producto" placeholder="Descripción del Producto"  name="descripcion" value="<%= typeof values != 'undefined' ? values.descripcion : '' %>"></textarea>
           </div>
         </article>
         <article class="sku-prec-container">
           <div>
             <label>SKU:</label>
-            <input type="text" placeholder="SSK111AB001 " />
+            <input type="text" placeholder="SSK111AB001 "  name="sku" value="<%= typeof values != 'undefined' ? values.sku : '' %>" />
           </div>
           <div>
             <label>Precio:</label>
-            <input class="inp-precio" type="number" placeholder="$ 0.000,00" />
+            <input class="inp-precio" type="number" placeholder="$ 0.000,00"  name="precio" value="<%= typeof values != 'undefined' ? values.precio : '' %>"/>
           </div>
           <div>
             <label>Stock:</label>
-            <input class="inp-stock" type="number" placeholder="0 " />
+            <input class="inp-stock" type="number" placeholder="0 "  name="stock" value="<%= typeof values != 'undefined' ? values.stock : '' %>"/>
           </div>
         </article>
         <article class="desc-cuo-container">
           <div>
             <label>Descuentos</label>
-            <input type="number" placeholder="0%" />
+            <input type="number" placeholder="0%" name="descuentos" value="<%= typeof values != 'undefined' ? values.descuentos : '' %>" />
           </div>
           <div>
             <label>Cuotas</label>
-            <select required>
+            <select >
               <option selected disabled value="">Elegir</option>
               <option>3 cuotas sin interés</option>
               <option>6 cuotas sin interés</option>
@@ -101,9 +138,10 @@
           </div>
         </article>
         <div class="boton-container">
-          <button type="submit">Modificar Producto</button>
+         <a ><button type="submit">Modificar Producto</button></a> 
         </div>
       </section>
+    </form>
     </main>
     <%- include('../partials/admin/footer') %>
   </body>

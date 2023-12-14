@@ -33,17 +33,6 @@ const admin = async (req, res) => {
         const producto = await model.create(req.body);
         console.log(producto);
 
-        /* if(req.file){
-            sharp(req.file.buffer)
-            .resize(300)
-            .toFile(
-                path.resolve(
-                  __dirname,
-                  `../../../public/uploads/producto_${producto.id}.jpg`
-                )
-              )
-            .catch((err) =>console.log(err));
-        } */
         if (req.file) {
             sharp(req.file.buffer)
               .resize(300)
@@ -78,10 +67,24 @@ const admin = async (req, res) => {
     
   };
   
-  const adminEditGet = (req, res) => {
-    console.log(req.params);
-    res.render('admin/edit');
-  };
+  const adminEditGet = async (req, res) => {
+    try {
+        const producto = await model.findByPk(req.params.id);
+        console.log(producto);
+
+        if(producto){
+            res.render("admin/edit", { values: producto });
+
+        }else {
+            res.status(404).send("No existe el producto")
+        }
+    
+      } catch (error) {
+        console.log(error);
+        res.status(500).send(error);
+      }
+    };
+  ;
 
   // este es el update del profe
   const adminEditPut = (req, res) => {

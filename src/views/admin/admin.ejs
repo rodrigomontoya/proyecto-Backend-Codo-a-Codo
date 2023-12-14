@@ -161,8 +161,8 @@
           <td> <%= producto.nombre %></td>
           <td> <%= producto.categoria%></td>
           
-          <td><a href="http://localhost:4000/admin/create"><img src="/images/icons/edit_pencil.svg"></td>
-            <td><img src="/images/icons/delete_trash.svg" id="deleteIcon" onclick="confirmarBorrado()" ></td>
+          <td class="icono-editar"><a href="/admin/<%= producto.id %>/edit"><img src="/images/icons/edit_pencil.svg"></a></td>
+            <td class="icono-borrar"><img src="/images/icons/delete_trash.svg" id="deleteIcon" onclick="confirmarBorrado()" ></td>
         </tr>
         <% }) %>
       </table>
