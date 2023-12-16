@@ -54,10 +54,13 @@
         </div>
       <% } %>
       <section class="edit-container">
-        <form action=""  method="post ">
+        <form action="/admin/<%= values.id %>?_method=PUT"
+          method="post "
+          enctype="multipart/form-data">
         <div>"
           <h1 class="titulo-edit">EDITAR ITEM</h1>
         </div>
+        <section class="form-edit-container">
         <article class="cat-licen-container">
           <div>
             <label>Categoría</label>
@@ -137,6 +140,7 @@
             <p>Dorso</p>
           </div>
         </article>
+      </section>
         <div class="boton-container">
          <a ><button type="submit">Modificar Producto</button></a> 
         </div>

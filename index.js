@@ -11,6 +11,10 @@ const session = require("cookie-session");
 const multer = require('multer');
 const sequelize = require("./src/models/connection");
 
+
+
+app.use(methodOverride("_method"));
+
 // Configuración de Multer
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });

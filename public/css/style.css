@@ -3366,6 +3366,12 @@ color: black;
  margin-top: 1em;
  
 }
+.form-edit-container{
+    display:flex;
+    flex-direction: column;
+    gap:1.2em;
+    margin-bottom: 1.2em;
+}
  .cat-licen-container{
     display:flex;
     gap:1.5em;
