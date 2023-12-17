@@ -87,11 +87,51 @@ const admin = async (req, res) => {
   ;
 
   // este es el update del profe
-  const adminEditPut = (req, res) => {
+  const adminEditPut = async (req, res) => {
     console.log(req.params,req.body);
-    res.send('Producto modificado');
+
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.render("admin/edit", {
+        values: req.body,
+        errors: errors.array(),
+      });
+    }
+  
+    try {
+      const affected = await model.update(req.body, {
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      if (affected[0] == 1) {
+        if (req.file) {
+          sharp(req.file.buffer)
+            .resize(300)
+            .toFile(
+              path.resolve(
+                __dirname,
+                `../../public/uploads/productos/producto_${req.params.id}.jpg`
+              )
+            )
+            .catch((err) => console.log(err));
+        }
+  
+        res.redirect("/admin");
+      } else {
+        res.status(400).send("No se actualizo el producto");
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).send(error);
+    }
   };
 
+ 
+  
+ 
   const adminDelete = (req, res) => {
     console.log(req.params);
     res.send("Producto borrado");

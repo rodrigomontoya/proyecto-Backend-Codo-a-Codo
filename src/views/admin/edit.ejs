@@ -54,9 +54,12 @@
         </div>
       <% } %>
       <section class="edit-container">
-        <form action="/admin/<%= values.id %>?_method=PUT"
+        <!-- <form action="/admin/<%= values.id %>?_method=PUT"
           method="post "
-          enctype="multipart/form-data">
+          enctype="multipart/form-data"> -->
+          <form action="/admin/<%= values.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+            <!-- Campo de anulación de método -->
+            <input type="hidden" name="_method" value="PUT">          
         <div>"
           <h1 class="titulo-edit">EDITAR ITEM</h1>
         </div>
