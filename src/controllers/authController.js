@@ -9,7 +9,7 @@ const model = require("../models/User");
   res.render('auth/login')
 }
 
- const authLoginPost= async (req,res) =>{
+const authLoginPost = async (req, res) => {
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
@@ -39,17 +39,17 @@ const model = require("../models/User");
         ],
       });
     } else {
+      // Inicio de sesión exitoso. Redirigiendo a /admin
       req.session.userId = user.id;
-      console.log("Inicio de sesión exitoso. Redirigiendo a /admin");
-
-      res.redirect("/admin");
+      res.redirect("/");
+      console.log("Inicio de sesión exitoso. Redirigiendo a /");
     }
   } catch (error) {
     console.log(error);
     res.send(error);
   }
- 
-}
+};
+
 
  const authRegisterGet=(req,res) =>
 
@@ -80,7 +80,11 @@ const authRegisterPost = async (req, res) => {
 };
 
 
- const authLogout=(req,res) =>{res.send('Route for Logout View')}
+ const authLogout=(req,res) =>{
+  req.session = null;
+  res.redirect("/");
+
+}
 
 
 

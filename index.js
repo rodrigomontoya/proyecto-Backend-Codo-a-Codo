@@ -30,18 +30,13 @@ app.use(
     saveUninitialized: false,
   })
 );
-
-
-
-
-
  const isLogin = (req, res, next) => {
   if (req.session && req.session.user) {
     // El usuario está autenticado
     return next();
   } else {
     // Excluir rutas de inicio de sesión y otras rutas públicas
-    const publicPaths = ['/login', '/register', '/public']; // Añade otras rutas públicas según sea necesario
+    const publicPaths = ['/login', '/register', '/public','admin']; // Añade otras rutas públicas según sea necesario
     if (publicPaths.includes(req.path)) {
       return next();
     }
@@ -50,13 +45,15 @@ app.use(
     res.redirect('/login');
   }
 };
+
 /*  const isLogin = (req, res, next) => {
   if (!req.session.userId) {
     return res.redirect("/login");
   }
 
   next();
-}; */
+}; */ 
+
 
 
  // configuracion cookie session
