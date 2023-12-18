@@ -65,6 +65,7 @@
             <div class="div4">
               <input
                 type="email"
+                id="email"
                 placeholder="Escriba su Email"
                 name="email"
                 value="<%= typeof values != 'undefined' ? values.email : '' %>"
@@ -86,8 +87,10 @@
         <div class="boton-register">
           <button type="submit">Registrarse</button>
         </div>
+      </form>
       </section>
-    </form>
+   
+     
     </main>
     <%- include('../partials/admin/footer') %>
   </body>

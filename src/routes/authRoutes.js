@@ -4,6 +4,7 @@ const authControllers= require('../controllers/authController');
 const model = require("../models/User");
 const { body } = require("express-validator");
 
+
 const registerValidations = [
   body("email")
     .isEmail()
