@@ -7,11 +7,12 @@ const shopRoutes= require('./src/routes/shopRoutes');
 const adminRoutes= require('./src/routes/adminRoutes');
 const authRoutes = require('./src/routes/authRoutes');
 const path = require('path');
-const session = require("cookie-session");
+/* const session = require("cookie-session"); */
+const session = require('express-session');
 const multer = require('multer');
 const sequelize = require("./src/models/connection");
 
-const session = require("cookie-session");
+
 
 app.use(methodOverride("_method"));
 
@@ -20,18 +21,36 @@ app.use(express.urlencoded({ extended: true }));
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-app.use(
+const isLogin = (req, res, next) => {
+  if (!req.session.userId) {
+    return res.redirect("/login");
+  }
+
+  next();
+}
+//  configuracion express session
+ app.use(
+   session({
+    secret: "S3cr3t01",
+    resave: false,
+    saveUninitialized: false,
+  }) 
+ ); 
+
+
+ // configuracion cookie session
+/* app.use(
   session({
     keys: ["S3cr3t01", "S3cr3t02"],
   })
-);
+); */
 
 
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.use('/',mainRoutes);
 app.use('/',shopRoutes);
-app.use('/',adminRoutes);
+app.use('/',isLogin,adminRoutes);
 app.use('/',authRoutes);
 app.use(methodOverride("_method"));
 
