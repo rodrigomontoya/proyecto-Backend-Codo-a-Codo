@@ -21,21 +21,42 @@ app.use(express.urlencoded({ extended: true }));
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-const isLogin = (req, res, next) => {
+
+//  configuracion express session
+app.use(
+  session({
+    secret: "S3cr3t01",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+
+
+
+
+ const isLogin = (req, res, next) => {
+  if (req.session && req.session.user) {
+    // El usuario está autenticado
+    return next();
+  } else {
+    // Excluir rutas de inicio de sesión y otras rutas públicas
+    const publicPaths = ['/login', '/register', '/public']; // Añade otras rutas públicas según sea necesario
+    if (publicPaths.includes(req.path)) {
+      return next();
+    }
+
+    // El usuario no está autenticado, redirige al inicio de sesión
+    res.redirect('/login');
+  }
+};
+/*  const isLogin = (req, res, next) => {
   if (!req.session.userId) {
     return res.redirect("/login");
   }
 
   next();
-}
-//  configuracion express session
- app.use(
-   session({
-    secret: "S3cr3t01",
-    resave: false,
-    saveUninitialized: false,
-  }) 
- ); 
+}; */
 
 
  // configuracion cookie session

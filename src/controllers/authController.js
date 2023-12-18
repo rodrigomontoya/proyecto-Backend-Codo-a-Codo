@@ -40,8 +40,9 @@ const model = require("../models/User");
       });
     } else {
       req.session.userId = user.id;
+      console.log("Inicio de sesión exitoso. Redirigiendo a /admin");
 
-      res.redirect("/");
+      res.redirect("/admin");
     }
   } catch (error) {
     console.log(error);

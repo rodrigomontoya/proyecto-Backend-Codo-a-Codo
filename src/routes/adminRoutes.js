@@ -33,6 +33,9 @@ const validations = [
   ];
 
 
+ 
+
+
 //rutas
 router.get('/admin',adminControllers.admin);
 router.get('/admin/create',adminControllers.adminCreateGet);
