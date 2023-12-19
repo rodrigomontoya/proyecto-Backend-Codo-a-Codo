@@ -91,7 +91,7 @@
             <input type="text" placeholder="Ingrese el nombre " name="nombre" value="<%= typeof values != 'undefined' ? values.nombre : '' %>" />
           </div>
           <div class="descrip-container">
-            <textarea placeholder="Descripción del Producto" placeholder="Descripción del Producto"  name="descripcion" value="<%= typeof values != 'undefined' ? values.descripcion : '' %>"></textarea>
+            <textarea placeholder="Descripción del Producto" placeholder="Descripción del Producto"  name="descripcion" ><%= typeof values != 'undefined' ? values.descripcion : '' %></textarea>
           </div>
         </article>
         <article class="sku-prec-container">
