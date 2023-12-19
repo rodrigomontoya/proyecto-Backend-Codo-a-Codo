@@ -1,20 +1,20 @@
 const path = require("path");
 const sharp = require("sharp");
 const { validationResult } = require("express-validator");
-const model = require("../models/Producto");
+const model = require("../models/Product");
 
 
 const admin = async (req, res) => {
     try {
       const productos = await model.findAll();
-      res.render("admin/admin", { productos });
+      res.render("admin/productos/admin", { productos });
     } catch (error) {
       res.status(500).send(error);
     }
   };
   
   const adminCreateGet = (req, res) => {
-    res.render('admin/create');
+    res.render('admin/productos/create');
   };
   
   const adminCreatePost =  async (req, res) => {
@@ -23,7 +23,7 @@ const admin = async (req, res) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      return res.render("admin/create", {
+      return res.render("admin/productos/create", {
         values: req.body,
         errors: errors.array(),
       });
@@ -73,7 +73,7 @@ const admin = async (req, res) => {
         console.log(producto);
 
         if(producto){
-            res.render("admin/edit", { values: producto });
+            res.render("admin/productos/edit", { values: producto });
 
         }else {
             res.status(404).send("No existe el producto")
@@ -93,7 +93,7 @@ const admin = async (req, res) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      return res.render("admin/edit", {
+      return res.render("admin/productos/edit", {
         values: req.body,
         errors: errors.array(),
       });

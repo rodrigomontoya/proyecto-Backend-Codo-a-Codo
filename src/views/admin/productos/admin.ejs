@@ -15,7 +15,7 @@
     <title>Admin</title>
   </head>
   <body>
-    <%- include('../partials/admin/header') %>
+    <%- include('../../partials/admin/header') %>
     <main class="container-admin">    
     <div class="searchBar">
       <div>
@@ -31,7 +31,7 @@
       <h2 class="tituloAdmin">LISTADO DE PRODUCTOS</h2>
       <div class="addButton">
         <p>AGREGAR</p> 
-        <a href="http://localhost:4000/admin/create">
+        <a href="/admin/create">
         <button>+</button>
       </a>
       </div>
@@ -169,7 +169,7 @@
      
       </body>
   </main>
-  <%- include('../partials/admin/footer') %>
+  <%- include('../../partials/admin/footer') %>
   <script>
     function confirmarBorrado() {
       // Muestra el cuadro de diálogo de confirmación

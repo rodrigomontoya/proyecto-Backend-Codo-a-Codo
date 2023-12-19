@@ -30,23 +30,10 @@ app.use(
     saveUninitialized: false,
   })
 );
- /* const isLogin = (req, res, next) => {
-  if (!req.session.userId) {
-    // El usuario está autenticado
-    return next();
-  } else {
-    // Excluir rutas de inicio de sesión y otras rutas públicas
-    const publicPaths = ['/login', '/register', '/public']; // Añade otras rutas públicas según sea necesario
-    if (publicPaths.includes(req.path)) {
-      return next();
-    }
 
-    // El usuario no está autenticado, redirige al inicio de sesión
-    res.redirect('/login');
-  }
-}; */
 
 const isLogin = (req, res, next) => {
+
   console.log(req.session);
   const publicPaths = ['/login', '/register', '/public']; // Añade otras rutas públicas según sea necesario
   if (publicPaths.includes(req.path)) {
@@ -64,18 +51,6 @@ const isLogin = (req, res, next) => {
   // El usuario está autenticado, permite que la solicitud continúe
   next();
 };
-
-
- /*  const isLogin = (req, res, next) => {
-  if (!req.session.userId) {
-    return res.redirect("/login");
-  }else{
-
-    next();
-  }
- */
- 
-
 
 
 
@@ -108,7 +83,7 @@ app.use((req, res, next) => {
 app.listen(4000,async ()=>{
 
   try {
-    await sequelize.authenticate();
+    await sequelize.sync({alter:true});
   } catch (error) {
     console.log(error);
   }

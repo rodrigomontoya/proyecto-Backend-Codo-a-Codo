@@ -12,7 +12,7 @@ const sequelize = require("./connection");
   },
 });  */
 
-const Producto = sequelize.define("Producto", {
+const Product = sequelize.define("Product", {
     nombre: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -58,11 +58,11 @@ const Producto = sequelize.define("Producto", {
 })(); */
 
 // Después de definir todos los modelos
-sequelize.sync({ force: true }) // Cambia a `true` si quieres forzar la sincronización (esto eliminará y recreará las tablas)
+/* sequelize.sync({ force: true }) // Cambia a `true` si quieres forzar la sincronización (esto eliminará y recreará las tablas)
   .then(() => {
     console.log('Base de datos sincronizada correctamente');
   })
   .catch((error) => {
     console.error('Error al sincronizar la base de datos:', error);
-  });
-module.exports = Producto;
+  }); */
+module.exports = Product;
