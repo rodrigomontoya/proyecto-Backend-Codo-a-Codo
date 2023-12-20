@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/../css/style.css" />
     <title>Create</title>
     <style>
       .error-container {
@@ -61,13 +61,12 @@
         <form action="/admin" method="post" enctype="multipart/form-data">
           <article class="categ-lic">
             <div>
-              <label>Categoría:</label>
-              <select  name="categoria">
-                <option selected disabled value="">Elegir</option>
-                <option>Figuras</option>
-                <option>Figuras</option>
-                <option>Figuras</option>
-                <!-- no se qué opciones colocar-->
+              <label for="CategoryId">Categoria: </label>
+              <select name="CategoryId" id="CategoryId">
+                <option selected disabled value="">Elegir Categoría</option>
+                <% categorias.forEach(categoria => { %>
+                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                <% }) %>
               </select>
             </div>
             <div>
@@ -133,7 +132,7 @@
             />
           </div>
 
-          <article class="botones-container">
+          <article class="botones-container-create">
             <div>
               <button class="agregar-producto" type="submit" onclick="deshabilitarBoton()">Agregar Producto</button>
             </div>

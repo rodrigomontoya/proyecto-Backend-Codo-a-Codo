@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("./connection");
+const Category = require("./Category");
 
 /*  const Producto = sequelize.define("Producto", {
   nombre: {
@@ -45,9 +46,13 @@ const Product = sequelize.define("Product", {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    cuotas: {
+      type: DataTypes.STRING,
+      allowNull: true,
+  },
   });
   
-
+  Product.belongsTo(Category);
  
 
   

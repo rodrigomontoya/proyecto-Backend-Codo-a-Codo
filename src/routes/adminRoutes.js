@@ -29,6 +29,10 @@ const validations = [
      .bail()
      .isNumeric()
      .withMessage('El sku debe contener solo números'),
+     body("CategoryId")
+     .not()
+     .isEmpty()
+     .withMessage("El categoría es obligatorio"),
    
   ];
 

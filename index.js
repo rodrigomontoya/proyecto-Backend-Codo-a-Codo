@@ -6,12 +6,13 @@ const mainRoutes= require('./src/routes/mainRoutes');
 const shopRoutes= require('./src/routes/shopRoutes');
 const adminRoutes= require('./src/routes/adminRoutes');
 const authRoutes = require('./src/routes/authRoutes');
+const adminCategoriasRoutes = require("./src/routes/categoriasRoutes");
+
 const path = require('path');
 /* const session = require("cookie-session"); */
 const session = require('express-session');
 const multer = require('multer');
 const sequelize = require("./src/models/connection");
-
 
 
 app.use(methodOverride("_method"));
@@ -68,7 +69,10 @@ app.use('/',mainRoutes);
 app.use('/',shopRoutes);
 app.use('/',isLogin,adminRoutes);
 app.use('/',authRoutes);
+app.use("/", isLogin, adminCategoriasRoutes);
 app.use(methodOverride("_method"));
+
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/src/views"));

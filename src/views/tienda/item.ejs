@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"  href="/../css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+    <title>Item</title>
+  </head>
+  <body class="cuerpo">
+    <%- include('../partials/shop/header') %>
+    <main >
+      <section class="item">
+        <article class="item-img">
+          <picture>
+            <img src="/uploads/productos/producto_<%= producto.id %>.jpg" alt="">
+          </picture>
+        </article>
+        <article class="item-desc">
+          <div class="descripcion-fila-1">
+            <p class="desc-1-fila-1"><%= producto.Category.nombre %></p>
+            <h4 class="desc-2-fila-1"><%= producto.nombre %></h4>
+            <p class="desc-3-fila-1">
+                <%= producto.descripcion %>
+            </p>
+            <p class="desc-4-fila-1">$ <%= producto.precio %></p>
+          </div>
+          <div class="cantidad">
+            <label>
+              <div class="botones-container">
+                <input type="number" name="quantity" id="quantity" placeholder="0" readonly />
+                <div class="botones-cant-item">
+                  <button id="add"><img src="/../images\icons\signo +.svg" /></button>
+                  <button id="subtract"><img src="/../images\icons\signo -.svg" /></button>
+                </div>
+              </div>
+              <div>
+                <button>Agregar al Carrito</button>
+              </div>
+            </label>
+          </div>
+          <div class="modos-pago">
+            <p>Ver métodos de pago - <%= producto.cuotas %></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="ult-lanz glide">
+        <div class="ult-lanz-titulo">
+          <h2>ÚLTIMOS LANZAMIENTOS</h2>
+        </div>
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <article class="lanz-1">
+                <div class="lanz-1-img-text">
+                  <div>
+                    <button>NUEVO</button>
+                  </div>
+                </div>
+                <a   class="enlace-imagen" href="">
+                  <picture class="lanz-1-img">
+                    <img class="imagen-normal"  src="/../images\star-wars\trooper-1.webp" alt="star wars trooper-1"></img>
+                    <img class="imagen-hover" src="/../images\star-wars\trooper-box.webp" alt="star wars trooper-1-box"></img>
+                  </picture>
+                  <div class="lanz-1-desc">
+                    <p class="lanz-1-desc-1">STAR WARS</p>
+                    <h4 class="lanz-1-desc-2">STORMTROPPER LIGHTSABER</h4>
+                    <p class="lanz-1-desc-3">$ 1799,99</p>
+                    <p class="lanz-1-desc-4">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="glide__slide">
+              <article class="lanz-2">
+                <div class="lanz-2-img-text">
+                  <div>
+                    <button>NUEVO</button>
+                  </div>
+                </div>
+                <a  class="enlace-imagen"  href="">
+                  <picture class="lanz-2-img">
+                    <img class="imagen-normal"  src="/../images\pokemon\pidgeotto-1.webp" alt="pidgeotto-1-pokemon"></img>
+                    <img class="imagen-hover" src="/../images\pokemon\pidgeotto-box.webp" alt="pdigeotto-1-pokemon-box"></img>
+                  </picture>
+                  <div class="lanz-2-desc">
+                    <p class="lanz-2-desc-1">POKEMON</p>
+                    <h4 class="lanz-2-desc-2">PIDGEOTTO</h4>
+                    <p class="lanz-2-desc-3">$ 1799,99</p>
+                    <p class="lanz-2-desc-4">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="glide__slide">
+              <article class="lanz-3">
+                <div class="lanz-3-img-text">
+                  <div>
+                    <button>NUEVO</button>
+                  </div>
+                </div>
+                <a   class="enlace-imagen" href="">
+                  <picture class="lanz-3-img">
+                    <img class="imagen-normal"  src="/../images\harry-potter\luna-1.webp" alt="luna-harry-potter-1"></img>
+                    <img class="imagen-hover" src="/../images\harry-potter\luna-box.webp" alt="luna-harry.potter-box"></img>
+                  </picture>
+                  <div class="lanz-3-desc">
+                    <p class="lanz-3-desc-1">HARRY POTTER</p>
+                    <h4 class="lanz-3-desc-2">LUNA LOVEGOOD LION MASK</h4>
+                    <p class="lanz-3-desc-3">$ 1799,99</p>
+                    <p class="lanz-3-desc-4">3 CUOTAS SIN INTERÉS</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <iconify-icon icon="mdi:chevron-left"></iconify-icon>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <iconify-icon icon="mdi:chevron-right"></iconify-icon>
+          </button>
+        </div>
+      </section>
+    </main>
+    <%- include('../partials/shop/footer') %>
+    <script src="/../script/item.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      new Glide(".glide", {
+        type: "carousel",
+        startAt: 0,
+        perView: 3,
+        gap: 30,
+        breakpoints: {
+          991: {
+            perView: 2,
+          },
+          768: {
+            perView: 2,
+          },
+          468: {
+            perView: 1,
+          },
+        },
+      }).mount();
+    </script>
+  </body>
+</html>

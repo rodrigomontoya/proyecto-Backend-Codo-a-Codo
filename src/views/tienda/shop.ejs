@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="../css/style.css">
+    <link rel="stylesheet"  href="/../css/style.css">
     <title>Shop</title>
+    <style>
+      a {
+  text-decoration: none;
+  color: inherit;
+  
+}
+    </style>
   </head>
   <body class="cuerpo-shop">
     <%- include('../partials/shop/header') %>
@@ -213,6 +220,35 @@
               <p class="desc-4-fila-3">3 CUOTAS SIN INTERÉS</p>   
           </div>
       </article>
+    </div>
+    <div class="fila-3 ">
+      <% productos.forEach(producto => { %>
+        <article class="prod-3-fila-3">   
+          <div class="prod-3-3-text">
+            <button>NUEVO</button>
+          </div>
+          <a class="enlace-imagen" href="/shop/item/<%= producto.id %>">
+            <picture class="prod-1-img" style="display: flex; align-items: center; justify-content: center;">
+              <img class="imagen-nueva"
+                src="/uploads/productos/producto_<%= producto.id %>.jpg"
+                alt="<%= producto.nombre %>"
+                
+              />
+            </picture>
+            <div class="prod-des-9-fila-3">
+              <h1 class="desc-1-fila-3"><%= producto.Category.nombre %></h1>
+              <h2 class="desc-2-fila-3"><%= producto.nombre %></h2>                    
+              <p class="desc-3-fila-3">$<%= producto.precio %></p>
+              <p class="desc-4-fila-3"><%= producto.cuotas %></p>   
+            </div>
+          </a>
+          
+        </article>
+      <% }) %>
+      
+       
+
+
     </div>
   </article>
   </div>                 

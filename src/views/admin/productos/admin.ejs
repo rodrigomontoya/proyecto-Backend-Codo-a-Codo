@@ -13,6 +13,17 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Admin</title>
+    <style>
+      .form-delete button {
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+      }
+    
+     
+    </style>
   </head>
   <body>
     <%- include('../../partials/admin/header') %>
@@ -159,10 +170,22 @@
           <td><%= producto.id %></td>
           <td><%= producto.sku %></td>
           <td> <%= producto.nombre %></td>
-          <td> <%= producto.categoria%></td>
+          <td> <%= producto.Category.nombre%></td>
           
           <td class="icono-editar"><a href="/admin/<%= producto.id %>/edit"><img src="/images/icons/edit_pencil.svg"></a></td>
-            <td class="icono-borrar"><img src="/images/icons/delete_trash.svg" id="deleteIcon" onclick="confirmarBorrado()" ></td>
+
+          
+          <td >
+            <form
+            class="form-delete"
+            action="/admin/<%= producto.id %>?_method=DELETE"
+            method="post"
+          >
+            <button type="submit"> <img src="/images/icons/delete_trash.svg"></button>
+          </form>
+
+          </td>
+        
         </tr>
         <% }) %>
       </table>
@@ -171,18 +194,15 @@
   </main>
   <%- include('../../partials/admin/footer') %>
   <script>
-    function confirmarBorrado() {
-      // Muestra el cuadro de diálogo de confirmación
-      var confirmacion = confirm("¿Seguro que quieres borrar este producto?");
-  
-      // Si el usuario hace clic en "Aceptar" en el cuadro de diálogo
-      if (confirmacion) {
-        // Aquí puedes agregar lógica para realizar la acción de borrado
-        alert("Producto borrado"); // Solo una alerta de ejemplo
+    document.addEventListener("submit", (event) => {
+      if (event.target.classList.contains("form-delete")) {
+        event.preventDefault();
+
+        if (confirm("¿Esta seguro?")) {
+          event.target.submit();
+        }
       }
-      // Si el usuario hace clic en "Cancelar", no haces nada
-    }
+    });
   </script>
-  
 </body>
 </html>

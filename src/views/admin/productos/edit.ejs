@@ -66,13 +66,12 @@
         <section class="form-edit-container">
         <article class="cat-licen-container">
           <div>
-            <label>Categoría</label>
-            <select >
-              <option selected disabled value="">Elegir</option>
-              <option>Figuras</option>
-              <option>Figuras</option>
-              <option>Figuras</option>
-              <!-- no se que opciones colocar-->
+            <label for="CategoryId">Categoria: </label>
+            <select name="CategoryId" id="CategoryId">
+              <option value="" ></option>
+              <% categorias.forEach(categoria => { %>
+              <option value="<%= categoria.id %>" <%= categoria.id == values.CategoryId ? "selected" : "" %> ><%= categoria.nombre %></option>
+              <% }) %>
             </select>
           </div>
           <div>
